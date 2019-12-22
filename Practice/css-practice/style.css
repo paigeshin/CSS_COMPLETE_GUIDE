@@ -1,16 +1,28 @@
-body {
-    font-family: 'Monserrat', sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#product-overview {
-    background: #ff1b68;
+header {
+    background: beige;
 }
 
-.section-title {
-    color: #2ddf5c;
+header > div {
+    display: inline-block;
+    padding: 16px;
 }
 
-h1 {
-    color: white;
-    font-family: 'Anton', sans-serif;
+ul {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    list-style: none;
+    text-align: right;
+    width: calc(100% - 30px);
+}
+
+li {
+    padding: 10px;
+    display: inline-block;
 }

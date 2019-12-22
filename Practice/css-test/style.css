@@ -1,0 +1,27 @@
+body {
+    font-family: monospace, sans-serif;
+    color: red;
+}
+
+h1 {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: cornflowerblue;
+}
+
+.list {
+    color: green;
+}
+
+ul li {
+    font-family: sans-serif;
+}
+
+ul li:nth-child(1){
+    background: black;
+    color: white;
+}
+
+ul li {
+    background: black;
+    color: white;
+}
