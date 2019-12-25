@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vertical-Align Property</title>
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        div {
+            background-color: red;
+            width: 100%;
+            height: 500px;
+        }
+
+        /* 여기선 적용안됨 */
+        p {
+            color: white;
+            vertical-align: middle;
+        }
+
+        /* 여기선 적용됨 */
+        .email {
+            vertical-align: baseline;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <p>Welcome TO my site <span class="email">Power email</span> Good Bye</p>
+</div>
+
+</body>
+</html>

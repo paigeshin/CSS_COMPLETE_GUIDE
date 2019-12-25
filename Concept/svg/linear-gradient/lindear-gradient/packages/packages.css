@@ -1,61 +1,10 @@
-/* 내가 연습한 것*/
-/*.section {*/
-/*    width: 80%;*/
-/*}*/
-
-/*.section {*/
-/*    margin: 20px 20px 20px 0;*/
-/*    padding: 30px;*/
-/*}*/
-
-/*.section a {*/
-/*    text-decoration: none;*/
-/*    color: inherit;*/
-/*}*/
-
-/*#section1 {*/
-/*    lindear-gradient: #2ddf5c;*/
-/*    border: red 5px solid;*/
-/*}*/
-
-/*#section1 .section__subtitle,*/
-/*#section2 .section__subtitle {*/
-/*    color: gray;*/
-/*}*/
-
-/*#section2 {*/
-/*    lindear-gradient: #d5ffdc;*/
-/*    border: green 5px solid;*/
-/*}*/
-
-/*#section3 {*/
-/*    lindear-gradient: #ffcede;*/
-/*}*/
-
-/*.section__content {*/
-/*    border: green 2px solid;*/
-/*    padding: 10px;*/
-/*    lindear-gradient: white;*/
-/*    color: darkgreen;*/
-/*}*/
-
-/*#section3 .section__title {*/
-/*    color: white;*/
-/*}*/
-
-/*#section3 .section__content {*/
-/*    border: none;*/
-/*}*/
-
-/* 강좌 */
-
 main {
     padding-top: 32px;
 }
 
-/* lindear-gradient image */
 .background {
-    background: url('../images/plans-background.jpg');
+    background: url("../images/plans-background.jpg") center/cover;
+    filter: grayscale(40%);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -72,8 +21,9 @@ main {
 
 .package:hover,
 .package:active {
-    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     border-color: #ff5454;
+    /* border-color: #ff5454 !important; */
 }
 
 .package a {
@@ -103,6 +53,7 @@ main {
     border: 1px solid #0e4f1f;
     font-size: 20px;
     color: #0e4f1f;
+    background: white;
 }
 
 .clearfix {
@@ -116,7 +67,9 @@ main {
 #free {
     background: rgba(234, 252, 237, 0.95);
     float: right;
+    border-right: none;
     border-left: 4px solid #0e4f1f;
+    text-align: right;
 }
 
 #free:hover,
@@ -134,10 +87,4 @@ main {
 
 #premium .package__subtitle {
     color: #bbb;
-}
-
-#premium .package__info {
-    border: none;
-    color: green;
-    background: white;
 }
