@@ -9,7 +9,7 @@
 }
 
 .testimonial:first-of-type {
-    margin-top: 96px;
+    margin-top: 6rem;
 }
 
 .testimonial__image-container {
@@ -44,12 +44,12 @@
 .testimonial__name {
     margin: 0.2rem;
     color: #ff5454;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .testimonial__subtitle {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     color: #ccc;
 }
 
