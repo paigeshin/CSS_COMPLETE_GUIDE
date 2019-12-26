@@ -196,3 +196,8 @@ body {
 .button:focus {
   outline: none;
 }
+
+/* action 같은 것은 important를 줘도 된다. */
+.open {
+  display: block; !important;
+}
