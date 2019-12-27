@@ -59,15 +59,7 @@ main {
 
   .testimonial__text {
     margin: 0.2rem;
-    /*font-size: 40px;*/
-    /*font-variant: small-caps; !* 모두 작은 대문자가 됨 *!*/
-    /*font-stretch: ultra-condensed; !* 브라우저마다 support해주는 기능이 다름 *!*/
-    /*letter-spacing: 5px; !* kerning *!*/
-    /*white-space: normal !* space의 간격을 정해줄 수 있음 *!*/
-    /*white-space: nowrap; !* 화면이 줄어들더라도 줄바꿈을 하지 않음 *!*/
-    /*white-space: pre; !* html에서 적었던 줄바꿈이 일어남. 말로는 설명하기 힘드니 사진으로.. *!*/
-    /*white-space: pre-wrap; !* pre가 wrap이 적용됨. (줄이 많으면 박스 안에 넣어 들어가는 부분) *!*/
-    /*white-space: pre-line; !* 잘 이해는 안되지만 굳이 안쓸거 같아서 넘어감 *!*/
+    white-space: pre-line;
   }
 
   @media (min-width: 40rem) {

@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Montserrat, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 
@@ -205,13 +205,6 @@ main {
   cursor: pointer;
 }
 
-.button [disabled] {
-  cursor: not-allowed;
-  border: #a1a1a1;
-  background: #ccc;
-  color: #a1a1a1;
-}
-
 .button:hover,
 .button:active {
   background: white;
@@ -221,6 +214,13 @@ main {
 .button:focus {
   outline: none;
 }
+
+.button[disabled] {
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background: #ccc;
+  color: #a1a1a1;
+} 
 
 .open {
     display: block !important;
