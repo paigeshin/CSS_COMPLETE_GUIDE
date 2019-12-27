@@ -7,6 +7,12 @@ body {
   margin: 0;
 }
 
+main {
+  /* 100vh - header(vh) - footer(vh) */
+  min-height: calc(100vh - 3.5rem - 8rem);
+  margin-top: 3.5rem;
+}
+
 .backdrop {
   position: fixed;
   display: none;
@@ -60,7 +66,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
-  height: 1.5rem;
+  height: 2.5rem;
   /* width: 20px; */
   display: inline-block;
   vertical-align: middle;
@@ -146,6 +152,23 @@ body {
 .main-footer__link a:hover,
 .main-footer__link a:active {
   color: #ccc;
+}
+
+.main-nav {
+  display: none;
+}
+
+.toggle-button {
+  display: inline-block;
+}
+
+@media (min-width: 40rem) {
+   .main-nav {
+     display: inline-block;
+   }
+  .toggle-button {
+    display: none;
+  }
 }
 
 .mobile-nav {

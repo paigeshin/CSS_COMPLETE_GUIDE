@@ -1,6 +1,6 @@
 #product-overview {
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url("images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box,
+    url("images/freedom.jpg") center/cover no-repeat border-box,
     #ff1b68;
   /* background-image: url("freedom.jpg");
     background-size: cover;
@@ -12,7 +12,6 @@
   /* background-image: radial-gradient(ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
   width: 100vw;
   height: 33vh;
-  margin-top: 2.75rem;
   /* border: 5px dashed red; */
   position: relative;
 }
@@ -28,28 +27,54 @@
   position: absolute;
   bottom: 5%;
   left: 3%;
+  font-size: 1.6rem;
 }
 
-.plan__list {
-  width: 80%;
-  margin: auto;
-  text-align: center;
+@media (min-width: 40rem) and (min-height: 40rem) {
+  /* 모바일 디바이스에서 이미지 크기 바꾸기 */
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
+
+  #product-overview h1 {
+    font-size: 1rem;
+  }
 }
+
+@media (min-width: 60rem) {
+  /* 모바일 디바이스에서 이미지 크기 바꾸기 */
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
+
+  #product-overview h1 {
+    font-size: 1rem;
+  }
+}
+
+
+/*.plan__list {*/
+/*  width: 100%;*/
+/*  text-align: center;*/
+/*}*/
+
 
 .plan {
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  /*display: inline-block;*/
+  /*width: 100%;*/
+  /*vertical-align: middle;*/
 }
 
 .plan--highlighted {
   background: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);*/
 }
 
 .plan__annotation {
@@ -86,11 +111,34 @@
   margin: 0.5rem 0;
 }
 
+@media (min-width: 40rem) {
+
+  .plan__list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    /*margin: auto;*/
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
 #key-features {
   background: #ff1b68;
   margin-top: 5rem;
   padding: 1rem;
 }
+
 
 #key-features .section-title {
   color: white;
@@ -105,8 +153,8 @@
 }
 
 .key-feature {
-  display: inline-block;
-  width: 30%;
+  display: block;
+  width: 100%;
   vertical-align: top;
 }
 
@@ -116,7 +164,8 @@
   height: 128px;
   border: 2px solid #424242;
   border-radius: 50%;
-  margin: auto;
+  /*margin: auto;*/
+  margin: 2rem auto;
   padding: 1.5rem;
 }
 
@@ -125,6 +174,14 @@
   font-weight: bold;
   color: white;
   font-size: 1.2rem;
+}
+
+/* min-width가 40rem보다 클 때 */
+@media (min-width: 40rem) {
+    .key-feature {
+      display: inline-block;
+      width: 30%;
+    }
 }
 
 /* h1 {
