@@ -1,0 +1,34 @@
+.container {
+    margin: 20px;
+    height: 500px;
+    display: grid;
+    /*grid-template-columns: 25% 25% 25% 25%;*/
+    grid-template-columns: repeat(4, 25%);
+    /*  minmax(p1, p2) p1 - minimum, p2 - maximum  */
+    grid-template-rows: 5rem minmax(10px, auto) 100px;
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    grid-column-start: 1;
+    grid-column-end: -2;
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+    /* line이 기준임 */
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+}
+
+
