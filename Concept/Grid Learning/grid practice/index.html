@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    * {
+        margin: 20px;
+        background-color: #7C899B;
+    }
+
+    .container {
+        border: 1px solid black;
+        background-color: #2C9DD4;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .header {
+        background-color : darkslategray;
+        color: white;
+        padding: 2rem 0;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .sidebar {
+        background-color : darkslategray;
+        color: white;
+        padding: 4rem 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: darkslategray;
+        color: white;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .footer {
+        background-color: darkslategray;
+        color: white;
+        padding: 2rem 0;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+</style>
+
+<body>
+
+<div class="container">
+
+    <div class="header">header</div>
+    <div class="sidebar">sidebar</div>
+    <div class="main_content">main content</div>
+    <div class="footer">footer</div>
+
+</div>
+
+</body>
+</html>
