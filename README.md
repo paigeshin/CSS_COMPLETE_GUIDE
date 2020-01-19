@@ -14,9 +14,10 @@ grid-column : stat / end 등을 배웠고
 
 grid-template-areas에 대해서 공부했다.
 
-grid-template-areas:    'header header header header'
+grid-template-areas:    
 
-                        'side side main main'
+                        'header header header header'                        
+                        'side side main main'                     
                         'footer footer footer footer';
 
 이런 식으로 지정해주면 엄청 편하게 layout을 작성할 수 있다. 
