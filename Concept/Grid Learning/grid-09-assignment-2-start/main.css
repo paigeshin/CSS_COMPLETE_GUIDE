@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    margin: 20px;
+    height: 100%;
+    grid-gap: 20px;
+    grid-template-areas: 'header header header header'
+                         'aside main main main'
+                         'footer footer footer footer';
+
+}
+
+header {
+    background: blue;
+    color: white;
+    grid-area: header;
+}
+
+main {
+    background: red;
+    color: white;
+    grid-area: aside;
+}
+
+aside {
+    background: green;
+    color: white;
+    grid-area: main;
+}
+
+footer {
+    background: purple;
+    color: white; 
+    grid-area: footer;
+}
