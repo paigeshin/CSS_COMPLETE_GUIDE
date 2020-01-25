@@ -1,6 +1,61 @@
 # CSS_COMPLETE_GUIDE
 I was always annoyed when I was using CSS. Let's overcome it!
 
+**20.01.25**
+ 
+ - transform
+ 
+         transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+         transform-origin: 25% 50%;
+         
+transform은 실제로 움직이는 것일 명령해준다. rotateZ(45deg) => 45도 만큼 움직여라
+transform-origin, 어디서부터 움직일지 값을 정해줌.
+ 
+ - grid-auto-rows
+    
+        grid-auto-rows: minmax(8rem, auto);
+        grid-auto-columns: 5rem;
+    
+  default value : auto 보통 모든 column이나 row의 grid cell 크기가 같게 하고 싶을 때 사용한다. 
+  보통 grid를 사용하다보면 child element에 따라 celle의 크기가 달라질 때가 있다. 
+  grid-auto-rows 로 특정 값을 지정해주면 모두 row에게 일정한 크기를 가지게 만들 수 있다.
+  grid-auto-columns 로 칼럼 cell에게 일정한 크기를 가지게 만들 수 있다.
+ 
+- grid-auto-flow
+grid 가 어떻게 화면에 출력하는지 정해줌.
+
+        grid-auto-flow: column;   /* 모든 grid cell에 column의 형식으로 배분됨 */
+        
+
+- auto-fill (value)
+row나 column에서 허용하는 만큼 row나 column의 value를 넣어준다. 
+엄청나게 responsive
+    
+         grid-template-columns: repeat(auto-fill, 15rem);
+         
+- auto-fit (value)
+row나 column에서 허용하는 만큼 row나 column의 value를 넣어준다.  => auto-fill과 거의 비슷함.
+하지만 element를 중앙 정렬하는 것에서 다르다.
+
+- 비스듬한 사진 태크닉
+      .testimonial__image-container {
+        width: 100%;
+        max-width: 40rem;
+        box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+        transform: skew(20deg);
+        overflow: hidden;
+      }
+    
+      .testimonial__image {
+        width: 100%;
+        vertical-align: top;
+        transform: skew(-20deg) scaleX(1.4);
+      }
+    
+    1. 이미지 container에 skew값 지정, overflow: hidden
+    2. 이미지는 본래 degree값 유지하기 위해서 skew(-20deg) 지정
+    3. 이미지랑 container랑 크기를 맞추기 위해 scaleX 값을 넣어준다.
+
 **20.01.24**
 
 ** mobile first media query

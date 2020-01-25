@@ -1,0 +1,25 @@
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15rem);
+    grid-template-rows: 20rem;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    grid-auto-rows: minmax(8rem, auto); /* default value : auto 보통 모든 column이나 row의 grid cell 크기가 같게 하고 싶을 때 사용한다. */
+    grid-auto-flow: row dense; /* 모두 칼럼으로 바꿔버림 */
+    grid-auto-columns: 5rem;  /* 칼럼의 width 값을 정해줌 */
+}
+
+.quote {
+  border: 1px solid #fa923f;
+  background: #ffbd87;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.quote--featured {
+  border: #ff4213;
+  background: #ff9f87;
+  grid-column: span 2;
+}
