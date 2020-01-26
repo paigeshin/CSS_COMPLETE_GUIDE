@@ -1,6 +1,72 @@
 # CSS_COMPLETE_GUIDE
 I was always annoyed when I was using CSS. Let's overcome it!
 
+**20.01.26**
+
+- transition
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background: #3DCCC7;
+            transition-duration: 350ms;
+            transition-property: background, transform;
+            /*
+             transition-property: all;
+             */
+        }
+
+        .box:hover {
+            background: #ff6B6B;
+            transform: rotate(45deg);
+        }
+            
+=> transition-duration
+
+=> transition-property 
+이 두 가지만 사용해도 많은 애니메이션을 만들 수 있다.            
+                
+
+- element를 뒤집었을 때 visibility 설정. 예를들어 rotateX 90deg를 준 경우
+        
+        backface-visibility: hidden;
+
+- transform-style: flat #preserve-3d
+
+        transform-style: preserve-3d;
+        
+=> 나는 많이 쓸것 같지 않지만... 그냥 이런 것도 있다고 알기만 하자.
+
+- perspective (value)
+=> 원근감을 의미한다. 100px이면 100px만큼 멀리서 보는 것을 의미. 1000px이면 1000px만큼 멀리서 보는 것을 의미.
+
+        transform: perspective(100px) rotateX(0deg) rotateY(80deg);
+        
+       
+- perspective (property)
+=> 원근감을 의미한다.
+- perspective-origin: left (right, 100px) #pixel 단위를 주었을 때는, 오른쪽으로 움직이는 것을 의미. 
+example) perspective-origin: 100px   => 오른쪽으로 100px 만큼 움직임.
+
+           .container {
+               margin: 150px auto;
+               border: 1px solid black;
+               width: 200px;
+               height: 200px;
+               perspective: 1000px;
+               perspective-origin: 100px;
+           }
+           
+           .box {
+               background: red;
+               width: 100%;
+               height: 100%;
+               transform: rotate(0deg) rotate(80deg);
+               color: white;
+               font-family: sans-serif;
+               text-align: center;
+           }
+
 **20.01.25**
  
  - transform
