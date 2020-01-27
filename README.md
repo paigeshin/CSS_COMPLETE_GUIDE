@@ -3,6 +3,50 @@ I was always annoyed when I was using CSS. Let's overcome it!
 
 **20.01.27**
 
+- Vendor prefixes
+=> 항상 쓰이는 property 위에 정의 되야 한다.
+
+        .box {
+        	display: -webkit-box;
+        	display: -ms-flexbox;
+        	display: -webkit-flex;	
+        	display: flex;
+        }
+
+
+- CSS variables
+    
+1. define
+
+        --variablename: value;
+
+
+
+2. use
+
+        color: var(—variablename)
+        
+3. basic syntax
+            
+       :root {
+       	--dark-green: #0e4f1f;
+       }
+       
+       button {
+       	color: var(--dark-green);
+       }
+
+4. fallback
+        
+      :root {
+      	--dark-green: #0e4f1f;
+      }
+      
+      button {
+      	color : var(--dark-green, #0e4f1f);
+      }
+
+
 - animation javascript event listener
 
         ctaButton.addEventListener("animationstart", function(event){
