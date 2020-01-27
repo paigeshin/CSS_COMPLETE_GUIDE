@@ -1,6 +1,68 @@
 # CSS_COMPLETE_GUIDE
 I was always annoyed when I was using CSS. Let's overcome it!
 
+**20.01.27**
+
+- animation javascript event listener
+
+        ctaButton.addEventListener("animationstart", function(event){
+            console.log('Animation Started', event);
+        });
+        
+        ctaButton.addEventListener("animationend", function(event){
+          console.log('Animation Ended', event);
+        });
+        
+        ctaButton.addEventListener("animationiteration", function(event){
+          console.log('Animation Iteration', event);
+        });
+
+- multiple keyframes 
+=> keyframe을 지정해줄 때 percentage로 지정해준다.
+        
+        @keyFrames anonymous {
+        
+             0% {
+             
+             }
+             
+             50% {
+             
+             }
+             
+             100% {
+             
+             }
+            
+        }
+        
+
+- keyframe
+
+        .main-nav__item--cta {
+          animation: wiggle 200ms 3s 8 alternate;
+        
+          /*
+        
+          Property Explanation
+          wiggle(keyframe), how long, delay, iteration, direction(alternate, reverse)
+        
+          */
+        }
+        
+        @keyframes wiggle {
+            from {
+              transform: rotateZ(0);
+            }
+            to {
+              transform: rotateZ(10deg);
+            }
+        }
+        
+animation property 설명
+
+animation: [ 애니메이션 ] , [  duration ] , [ delay ] , [ iteration ] , [ direction {alternate, reverse, forwards, backwards, none} ];
+
 **20.01.26**
 
 - transition
