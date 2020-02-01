@@ -1,6 +1,60 @@
 # CSS_COMPLETE_GUIDE
 I was always annoyed when I was using CSS. Let's overcome it!
 
+**20.02.01**
+- class naming convention
+        
+     Use kebab-case => because CSS is case-insensitive
+     Name by feature => .page-title
+     
+- BEM
+        
+     A uniform and consistent way of naming your CSS classes
+            
+        .block__element--modifier
+        .menu-main__item--size-big
+        .button__()--success
+
+- Eliminate Cross-Browser Inconsistencies
+
+    Browsers use different defaults
+    
+    Different Margins, Paddings | Different box-sizing
+        
+    Use **Reset-Library. (e.g. Normalize.css) | Reset Style Manually
+
+- Polyfills
+    - A **polyfill** is **JavaScript Package** which **enables certain CSS Features** in Browsers which would not support it otherwise.
+    - Remember: Polyfills come at a cost! The JS has to be loaded and parsed!
+    ⇒ 성능저하 문제가 있다. 잘 고려해야함.
+
+
+- Support Queries
+
+        @supports (display: grid) {
+        	.container {
+        		display: grid;
+        	}
+        }
+        
+실제 적용한 예제
+
+        @supports (display: grid) {
+        
+          body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            display: grid;
+            grid-template-rows: 3.5rem auto fit-content(8rem);
+            grid-template-areas: "header"
+            "main"
+            "footer";
+            /* padding-top: 3.5rem; */
+            height: 100%;
+          }
+        
+        }
+
 **20.01.27**
 
 - Vendor prefixes
