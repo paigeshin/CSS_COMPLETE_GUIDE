@@ -1,6 +1,248 @@
 # CSS_COMPLETE_GUIDE
 I was always annoyed when I was using CSS. Let's overcome it!
 
+**20.02.02**
+오늘로 study 마무리
+
+*SASS,SCSS*
+          
+-nesting 
+
+            .documentation-links {
+              list-style: none;
+              margin: 1rem 0 0 0;
+              padding: 0;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              flex-direction: column;
+            
+              li {
+                margin: 0.2rem 0;
+                background: white;
+              }
+            
+              .documentation-link {
+                text-decoration: none;
+                color: #521751;
+                display: block;
+                padding: 0.2rem;
+                border: 0.05rem solid #521751;
+              }
+            }
+            
+- apply sass or scss
+    - command 창에 해당 project로 들어와서 `sass main.scss main.css` 라고 쳐준다.
+    - sass {sass} {original}
+    
+
+- watching
+     - `sass --watch main.scss:main.css`   => 터미널 명령어임.
+compile 을 자동으로 해주는 것을 확인해줌.
+
+- nested properties
+       
+         .container {
+           display: -webkit-box;
+           display: -ms-flexbox;
+           display: -webkit-flex;
+           display: flex;
+           flex: {
+             direction: column;
+             wrap: nowrap;
+           }
+           align-items: center;
+           padding: 3rem 0;
+           box-sizing: border-box;
+         }
+        
+- variables
+
+        $main-color: #521751;
+        
+        .section-header {
+          border-bottom: 0.05rem solid $main-color;
+        }
+        
+- list of values
+
+       $border-default: 0.05rem solid $main-color;
+
+- map
+   - 정의
+        
+       $colors: (main: #521751, secondary: #fa923f);
+   
+   - 호출
+   
+       $border-default: 0.05rem solid map_get($colors, main);
+       
+- Built in Functions
+    -lighten(p1, p2);
+    - p1 : color
+    - p2 : brightness
+
+        background: lighten(map_get($colors, main), 70%);
+    
+ 
+- adding arithmetics
+    -기본적으로 multiplication, division, addition, subtraction 가능함.
+
+        .container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          flex: {
+            direction: column;
+            wrap: nowrap;
+          }
+          align-items: center;
+          padding: $size-default * 3 0;
+          box-sizing: border-box;
+        }
+        
+- Adding Better Import and Partials      
+        
+    - _variables.scss
+    
+        //$main-color: #521751;
+        $colors: (main: #521751, secondary: #fa923f);
+        $border-default: 0.05rem solid map_get($colors, main);
+        $size-default: 1rem;
+        $size-tiny: 0.2rem;
+
+    - main.css
+    
+        @import "_variables.scss";
+        
+        .char-highlight {
+          font-weight: bold;
+          font-size: 1.4rem;
+          color: map_get($colors, main);
+        }
+
+- media query in scss
+
+        html {
+          font-size: 94.75%;
+        
+          @media (min-width: 40rem) {
+            font-size: 125%;
+          }
+        
+        }
+
+- inheritance,  @extend
+
+        .sass-section {
+          border: $border-default;
+          background: lighten(map_get($colors, main), 70%);
+          padding: 2rem;
+          text-align: center;
+          width: 90%;
+          box-sizing: border-box;
+          @media (min-width: 40rem) {
+            width: 30rem;
+          }
+        }
+        .sass-introduction {
+          @extend .sass-section;
+          box-shadow: 0.2rem 0.2rem 0.1rem #ccc;
+          p {
+            margin: 0;
+          }
+        }
+        
+        .sass-details {
+          @extend .sass-section;
+          margin: 2rem 0;
+          @media (min-width: 40rem) {
+              width: 30rem;
+          }
+        }
+        
+- mixins
+    
+
+        @mixin display-flex() {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+        }
+        
+        .container {
+          @include display-flex();
+          flex: {
+            direction: column;
+            wrap: nowrap;
+          }
+          align-items: center;
+          padding: $size-default * 3 0;
+          box-sizing: border-box;
+        
+        
+          @media (min-width: 40rem) {
+            padding: 3rem 0;
+          }
+        }
+        
+- mixin with parameters
+
+        @mixin media-min-width($width){
+          @media(min-width: $width){
+            @content;
+          }
+        }
+        
+        html {
+          font-size: 94.75%;
+        
+          @include media-min-width(40rem){
+            font-size: 125%;
+          }
+        
+        }
+
+- understand ampersand operator 
+    - 연결을 의미한다
+
+        .documentation-links {
+          list-style: none;
+          margin: 1rem 0 0 0;
+          padding: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: column;
+        
+          li {
+            margin: 0.2rem 0;
+            background: white;
+          }
+        
+          .documentation-link {
+            text-decoration: none;
+            color: map_get($colors, main);
+            display: block;
+            padding: 0.2rem;
+            border: 0.05rem solid map_get($colors, main);
+          }
+        
+          &:hover,
+          &:active {
+            color: white;
+            background: map_get($colors, secondary);
+            border-color: map_get($colors, secondary);
+          }
+        
+        }
+        
+`&.anyClass`  식으로 class로 연결할 수도 있다.
+
 **20.02.01**
 - class naming convention
         
